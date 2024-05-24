@@ -3,131 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<link rel="stylesheet" href="./style.css">
+    <title>Places</title>
 </head>
 
 <body>
-    Name:<input id="newDestination">
-    <br>
-    Score:<input id="newScore">
-    <br>
-    Image:<input id="newImage">
-    <br>
-    <button onclick="addDestination()">Add</button>
-    <br>
-    <br>
-    <div id="display">
+    <div id="display"></div>
 
-
-    </div>
-
-    <script>
-        let myDestinations =
-            [
-                {
-                    name: "Barcelona",
-                    score: 8.5,
-                    description: "Barcelona is the capital of Catalunya.",
-                    image: "https://media.timeout.com/images/105992807/750/422/image.webp",
-                    restaurants: [
-                        {
-                            name: "Nine",
-                            type: "Carvery",
-                            location: "https://maps.app.goo.gl/JNaPnbF8Hbb1bjS96"
-                        },
-                        {
-                            name: "Restaurant Prado De Flores",
-                            type: "Mediterranean restaurant",
-                            location: "https://maps.app.goo.gl/CjPXnRvwvFLHp5jp6"
-                        },
-                        {
-                            name: "El Nacional",
-                            type: "Spanish restaurant",
-                            location: "https://maps.app.goo.gl/N4BQrMCENK1vxgZ86"
-                        }
-                    ]
-                },
-                {
-                    name: "Los Angeles",
-                    score: 7.9,
-                    description: "Los Angeles is in the west coast of the USA",
-                    image: "https://cdn.britannica.com/22/154122-050-B1D0A7FD/Skyline-Los-Angeles-California.jpg",
-                    restaurants: [
-                        {
-                            name: "Pico Cafe",
-                            type: "Kosher restaurant",
-                            location: "https://maps.app.goo.gl/jPiACPaA6RnSHvHp8"
-                        },
-                        {
-                            name: "Angelini Osteria",
-                            type: "Italian restaurant",
-                            location: "https://maps.app.goo.gl/hyg1Usp6cbiTkRESA"
-                        },
-                        {
-                            name: "Habayit",
-                            type: "Israeli restaurant",
-                            location: "https://maps.app.goo.gl/Mdupr54NbkQPn6aFA"
-                        }
-                    ]
-                },
-                {
-                    name: "New York",
-                    score: 8.2,
-                    description: "New York is the biggest city in the USA",
-                    image: "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
-                    restaurants: [
-                        {
-                            name: "Jerusalem Cafe",
-                            type: "Kosher restaurant",
-                            location: "https://maps.app.goo.gl/SaZZWsfbns6zqz4p6"
-                        },
-                        {
-                            name: "Club A",
-                            type: "Steak house",
-                            location: "https://maps.app.goo.gl/YrhBohnkcpuYmJMz5"
-                        },
-                        {
-                            name: "Boucherie West Village",
-                            type: "French restaurant",
-                            location: "https://maps.app.goo.gl/C6o3EhssptbonQmb9"
-                        }
-                    ]
-                }
-            ]
-
-        displayDestinations()
-
-
-        function addDestination() {
-            let newDest = {
-                name: newDestination.value,
-                score: Number(newScore.value),
-                image: newImage.value
-            }
-            myDestinations.push(newDest)
-            displayDestinations()
-        }
-
-        function displayDestinations() {
-            let finalStr = ''
-            for (let i = 0; i < myDestinations.length; i++) {
-                const destination = myDestinations[i];
-                let finalResturantsStr = ''
-                for (let idx = 0; idx < destination[i].restaurants.length; idx++) {
-                    const restaurant = destination[i].restaurants[idx];
-                    finalResturantsStr += `
-                    resturant
-                    `
-                }
-                finalStr += `
-                city
-                ${finalResturantsStr}<br>
-                `
-            }
-            display.innerHTML = finalStr
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
