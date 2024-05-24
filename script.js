@@ -1,5 +1,6 @@
 if (!localStorage.getItem('locations')) {
-    localStorage.setItem('locations', '[]');
+    resetLocalStorage()
+    localStorage.getItem('locations');
 }
 
 let myDestinations = JSON.parse(localStorage.getItem('locations'));
