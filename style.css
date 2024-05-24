@@ -5,10 +5,6 @@ body {
     color: #333;
     margin: 0;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* max-width: 300px; */
 }
 
 #display {
@@ -92,4 +88,96 @@ a:hover {
 
 .description {
     margin: 0 0 3% 0;
+}
+
+#addNewDestination {
+    width: 100%;
+    height: 50px;
+    background-color: #2065ab;
+    color: white;
+    font-size: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px rgb(60, 102, 170);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#addNewDestination:hover {
+    background-color: #4b7bac;
+}
+
+#addNewDestination:active {
+    box-shadow: 0 0;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.flex-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.box-inputs {
+    padding: 10vh;
+    background-color: #fee9e9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.destination-inputs {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.restaurants-inputs {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 5px;
+    text-align: center;
+    border-radius: 30px;
+    border: white solid 2px;
+}
+
+.button-add-dest {
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    height: 30px;
+    margin: 5px;
+}
+
+.add-button {
+    background-color: #2065ab;
+}
+
+.back-button {
+    background-color: #ff5757;
+}
+
+.long {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .box-inputs {
+        padding: 5vh;
+    }
+
+    .destination-inputs, .restaurants-inputs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input.long {
+        width: 100%;
+    }
 }
